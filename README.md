@@ -1,0 +1,1 @@
+This extension allows you to add your favorite things to do on the go, which you would otherwise forget if not put down.
