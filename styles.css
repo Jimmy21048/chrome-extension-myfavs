@@ -2,15 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 .body {
     height: max-content;
     max-height: 300px;
     width: 350px;
-    /* border-radius: 20px; */
 }
 body, html {
-    /* border-radius: 20px; */
     background-color: #F0FFFF;
 }
 .nav {
@@ -26,7 +25,7 @@ body, html {
     width: 100px;
     border-radius: 10px;
     background-color: #00BFFF;
-    border: 1px solid #006D6F;
+    border: none;
     font-weight: 800;
     cursor: pointer;
 }
@@ -40,7 +39,8 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.01rem;
 }
 .body input {
     height: 30px;
@@ -48,7 +48,6 @@ body, html {
     border-radius: 10px;
     border: 1px solid gray;
     padding-left: 5px;
-    /* font-size: 1.1rem; */
     background-color: #F0F8FF;
 }
 input:focus {
@@ -64,6 +63,10 @@ input:focus {
     background-color: #000;
     color: #f5f6f7;
 }
+.body form button:hover {
+    color: #000;
+    background-color: #00BFFF;
+}
 .media {
     display: flex;
     flex-direction: column;
@@ -75,7 +78,7 @@ input:focus {
     overflow-y: scroll;
 }
 .media-item {
-    height: 50px;
+    height: max-content;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -91,14 +94,24 @@ input:focus {
     font-weight: 600;
 }
 .item {
-    height: 50px;
+    height: max-content;
+    min-height: 50px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2px 0;
 }
 .item p {
     color: #555555;   
     font-weight: 700; 
+    max-width: 100%;
+    word-wrap: break-word;
 }
 .item h2 {
     color: #1B1B1B;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 ::-webkit-scrollbar {
     width: 10px;

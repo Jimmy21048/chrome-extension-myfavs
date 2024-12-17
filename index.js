@@ -64,14 +64,17 @@ mediaDiv.addEventListener('click', (e) => {
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     const name = document.getElementById("mediaName").value
-    const type = document.getElementById("mediaType").value
+    let type = document.getElementById("mediaType").value
 
-    mediaItems.push({name: name, type: type}) 
-    localStorage.setItem("media", JSON.stringify(mediaItems))
-    getItems()
-    showItems()
-    showList()
-    
-    document.getElementById("mediaName").value = ""
-    document.getElementById("mediaType").value = ""
+    if(name !== "") {
+        if(type === "") type = "unspecified";
+        mediaItems.push({name: name, type: type}) 
+        localStorage.setItem("media", JSON.stringify(mediaItems))
+        getItems()
+        showItems()
+        showList()
+        
+        document.getElementById("mediaName").value = ""
+        document.getElementById("mediaType").value = ""
+    }
 })
